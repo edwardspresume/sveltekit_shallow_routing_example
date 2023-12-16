@@ -1,5 +1,5 @@
 {
-	"name": "svelte_shallow_routing_example",
+	"name": "sveltekit_shallow_routing_example",
 	"version": "0.0.1",
 	"scripts": {
 		"knip": "knip",
