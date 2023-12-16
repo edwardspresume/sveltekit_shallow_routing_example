@@ -1,3 +1,13 @@
+export type User = {
+    id: number;
+    firstName: string;
+    lastName: string;
+    image: string;
+    email: string;
+    phone: string;
+};
+
+
 export enum AlertType {
 	SUCCESS = 'success',
 	ERROR = 'error',

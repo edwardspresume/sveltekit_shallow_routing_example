@@ -1,15 +1,9 @@
+import type { User } from '$lib/types';
 import type { PageServerLoad } from './$types';
 
-type User = {
-    id: number;
-    firstName: string;
-    lastName: string;
-    image: string;
-    email: string;
-    phone: string;
-};
 
 export const load: PageServerLoad = async ({ fetch, params: { userId } }) => {
+    const fetchUser = async () => {
     try {
         const response = await fetch(`https://dummyjson.com/users/${userId}?select=firstName,lastName,image,email,phone`);
 
@@ -19,9 +13,12 @@ export const load: PageServerLoad = async ({ fetch, params: { userId } }) => {
 
         const user = (await response.json()) as User;
 
-        return { user };
+        return user
     } catch (error) {
         console.error('Failed to load user:', error);
-        return {user: null};
+        return null
     }
+    };
+
+    return { user: await fetchUser()}
 };
