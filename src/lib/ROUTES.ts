@@ -10,7 +10,10 @@
  */
 const PAGES = {
   "/": `/`,
-  "/users": `/users`
+  "/users": `/users`,
+  "/users/[userId]": (params: { userId: (string | number) }) => {
+    return `/users/${params.userId}`
+  }
 }
 
 /**
@@ -110,9 +113,9 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
 * ```
 */
 export type KIT_ROUTES = { 
-  PAGES: { '/': never, '/users': never }
+  PAGES: { '/': never, '/users': never, '/users/[userId]': 'userId' }
   SERVERS: Record<string, never>
   ACTIONS: { 'default /sendFeedbackToEmail': never }
   LINKS: Record<string, never>
-  Params: Record<string, never>
+  Params: { userId: never }
 }
