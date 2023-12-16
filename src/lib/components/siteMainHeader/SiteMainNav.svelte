@@ -28,9 +28,13 @@
 		className
 	)}
 >
-	<ul>
+	<ul class="grid gap-2 sm:flex">
 		<li>
 			<Button variant="outline" class="w-full" href={route('/users')}>Users</Button>
+		</li>
+
+		<li>
+			<Button variant="outline" class="w-full" href={route('/photos')}>Photos</Button>
 		</li>
 	</ul>
 </nav>
