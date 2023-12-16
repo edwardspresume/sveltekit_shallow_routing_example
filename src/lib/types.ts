@@ -1,10 +1,16 @@
-export type User = {
+export type UserType = {
     id: number;
     firstName: string;
     lastName: string;
     image: string;
     email: string;
     phone: string;
+};
+
+export type ImageType = {
+	id: number;
+	alt: string;
+	src: string;
 };
 
 
