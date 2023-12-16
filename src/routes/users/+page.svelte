@@ -15,6 +15,7 @@
 	const { users } = data;
 
 	async function onProfileLinkClick(event: MouseEvent & { currentTarget: HTMLAnchorElement }) {
+		// Exit the function if the Meta key (Command on Mac, Windows key on Windows) or Control key was pressed during the click. This allows the default browser behavior (usually opening the link in a new tab or window).
 		if (event.metaKey || event.ctrlKey) return;
 
 		event.preventDefault();
