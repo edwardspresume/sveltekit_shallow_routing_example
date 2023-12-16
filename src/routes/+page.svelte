@@ -1,7 +1,1 @@
-<script lang="ts">
-	import type { PageData } from './$types';
-
-	export let data: PageData;
-</script>
-
-<h1>Home page</h1>
+<h1 class="text-2xl font-bold text-center">SvelteKit Shallow Routing Examples</h1>
