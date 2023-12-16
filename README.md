@@ -1,0 +1,1 @@
+# Svelte kit shallow routing example
