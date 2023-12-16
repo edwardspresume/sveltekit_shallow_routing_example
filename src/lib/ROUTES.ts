@@ -11,6 +11,9 @@
 const PAGES = {
   "/": `/`,
   "/photos": `/photos`,
+  "/photos/[photoId]": (params: { photoId: (string | number) }) => {
+    return `/photos/${params.photoId}`
+  },
   "/users": `/users`,
   "/users/[userId]": (params: { userId: (string | number) }) => {
     return `/users/${params.userId}`
@@ -114,9 +117,9 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
 * ```
 */
 export type KIT_ROUTES = { 
-  PAGES: { '/': never, '/photos': never, '/users': never, '/users/[userId]': 'userId' }
+  PAGES: { '/': never, '/photos': never, '/photos/[photoId]': 'photoId', '/users': never, '/users/[userId]': 'userId' }
   SERVERS: { 'GET /api/images': never }
   ACTIONS: Record<string, never>
   LINKS: Record<string, never>
-  Params: { userId: never }
+  Params: { photoId: never, userId: never }
 }
