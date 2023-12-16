@@ -5,14 +5,13 @@ type User = {
     firstName: string;
     lastName: string;
     image: string;
-    username: string;
     email: string;
     phone: string;
 };
 
 export const load: PageServerLoad = async ({ fetch, params: { userId } }) => {
     try {
-        const response = await fetch(`https://dummyjson.com/users/${userId}?select=firstName,lastName,image,username,email,phone`);
+        const response = await fetch(`https://dummyjson.com/users/${userId}?select=firstName,lastName,image,email,phone`);
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
