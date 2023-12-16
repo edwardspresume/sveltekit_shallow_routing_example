@@ -7,6 +7,9 @@
 
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
+	import { route } from '$lib/ROUTES';
+
+	import Button from '$components/ui/button/button.svelte';
 	import SiteMainNavMenuToggleBtn, { isSiteNavMenuOpen } from './SiteMainNavMenuToggleBtn.svelte';
 
 	let className: HTMLAttributes<HTMLElement>['class'] = undefined;
@@ -24,4 +27,10 @@
 		}`,
 		className
 	)}
-></nav>
+>
+	<ul>
+		<li>
+			<Button variant="outline" class="w-full" href={route('/users')}>Users</Button>
+		</li>
+	</ul>
+</nav>

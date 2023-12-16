@@ -11,8 +11,8 @@
 		<Button href={route('/')} variant="link" class="text-2xl font-bold">Home</Button>
 
 		<div class="flex gap-2">
-			<ThemeToggler />
 			<SiteMainNav />
+			<ThemeToggler />
 		</div>
 	</div>
 </header>
