@@ -1,6 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type { User } from "$lib/types";
+import type { UserType } from "$lib/types";
 
 // for information about these interfaces
 declare global {
@@ -10,7 +10,7 @@ declare global {
 		// interface PageData {}
 		interface PageState {
 			profile: {
-				user: User;
+				user: UserType;
 			}
 		}
 		// interface Platform {}

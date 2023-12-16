@@ -1,4 +1,4 @@
-import type { User } from '$lib/types';
+import type { UserType } from '$lib/types';
 import type { PageServerLoad } from './$types';
 
 
@@ -11,7 +11,7 @@ export const load: PageServerLoad = async ({ fetch, params: { userId } }) => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const user = (await response.json()) as User;
+        const user = (await response.json()) as UserType;
 
         return user
     } catch (error) {
