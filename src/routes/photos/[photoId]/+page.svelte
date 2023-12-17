@@ -43,7 +43,7 @@
 					<Button
 						size="sm"
 						variant="outline"
-						class="gap-2 text-blue-600 transition duration-300 ease-in-out hover:text-blue-800"
+						class="gap-2 text-blue-600"
 						aria-label="Like this image"
 					>
 						<Check />
@@ -53,7 +53,7 @@
 					<Button
 						size="sm"
 						variant="outline"
-						class="gap-2 text-blue-600 transition duration-300 ease-in-out hover:text-blue-800"
+						class="gap-2 text-blue-600"
 						aria-label="Comment on this image"
 					>
 						<MessagesSquare />
@@ -63,7 +63,7 @@
 					<Button
 						size="sm"
 						variant="outline"
-						class="gap-2 text-blue-600 transition duration-300 ease-in-out hover:text-blue-800"
+						class="gap-2 text-blue-600"
 						aria-label="Share this image"
 					>
 						<Share />
