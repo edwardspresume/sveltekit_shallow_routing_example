@@ -72,6 +72,7 @@
 							<Table.Cell>
 								<Dialog.Root>
 									<a
+										class="text-blue-500 duration-300 hover:text-blue-700"
 										href={route('/users/[userId]', { userId: user.id })}
 										on:click={onProfileLinkClick}
 									>
